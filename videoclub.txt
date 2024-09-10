@@ -1,0 +1,96 @@
+===Base de datos videoclub
+
+== Estructura de tabla para la tabla alquiler
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_alquiler**//|int(11)|No|
+|id_socio|int(11)|No|
+|id_disco|int(11)|No|
+|fecha_salida|date|No|
+|fecha_devolucion|date|Sí|NULL
+== Volcado de datos para la tabla alquiler
+
+|1|1|6|2024-02-03|2024-02-03
+|2|1|8|2024-02-03|2024-02-03
+|3|1|7|2024-02-03|2024-02-03
+|4|1|11|2024-02-03|NULL
+|5|1|7|2024-02-03|NULL
+|6|1|12|2024-02-03|NULL
+|7|25|10|2024-02-03|2024-02-03
+|8|25|14|2024-02-03|2024-02-03
+|9|24|13|2024-02-03|2024-02-03
+|10|24|15|2024-02-03|NULL
+|11|24|16|2024-02-03|NULL
+|12|24|15|2024-02-03|NULL
+== Estructura de tabla para la tabla disco
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_disco**//|int(11)|No|
+|tipo|enum(&#039;cd&#039;, &#039;dvd&#039;)|No|
+|nombre|varchar(100)|No|
+|autor_protagonista|varchar(100)|Sí|NULL
+|disponible|tinyint(1)|No|1
+== Volcado de datos para la tabla disco
+
+|3|cd|Disco 2 CD|Artista 2|0
+|4|dvd|Película 2 DVD|Actor 2|0
+|5|cd|Disco 3 CD|Artista 3|0
+|6|dvd|Película 3 DVD|Actor 3|0
+|7|cd|Disco 4 CD|Artista 4|0
+|8|dvd|Película 4 DVD|Actor 4|0
+|9|cd|Disco 5 CD|Artista 5|0
+|10|dvd|Película 5 DVD|Actor 5|0
+|11|cd|Disco 6 CD|Artista 6|0
+|12|dvd|Película 6 DVD|Actor 6|0
+|13|cd|Disco 7 CD|Artista 7|0
+|14|dvd|Película 7 DVD|Actor 7|0
+|15|cd|Disco 8 CD|Artista 8|0
+|16|dvd|Película 8 DVD|Actor 8|0
+|17|cd|Disco 9 CD|Artista 9|1
+|18|dvd|Película 9 DVD|Actor 9|1
+|19|cd|Disco 10 CD|Artista 10|1
+|20|dvd|Película 10 DVD|Actor 10|1
+|21|cd|Disco 11 CD|Artista 11|1
+|22|dvd|Película 11 DVD|Actor 11|1
+|23|cd|Disco 12 CD|Artista 12|1
+|24|dvd|Película 12 DVD|Actor 12|1
+|25|cd|Disco 13 CD|Artista 13|1
+|26|dvd|Película 13 DVD|Actor 13|1
+|27|cd|Disco 14 CD|Artista 14|1
+|28|dvd|Película 14 DVD|Actor 14|1
+|29|cd|Disco 15 CD|Artista 15|1
+|30|dvd|Película 15 DVD|Actor 15|1
+|31|cd|Disco 16 CD|Artista 16|1
+|32|dvd|Película 16 DVD|Actor 16|1
+|33|cd|Disco 17 CD|Artista 17|1
+|34|dvd|Película 17 DVD|Actor 17|1
+|35|cd|Disco 18 CD|Artista 18|1
+|36|dvd|Película 18 DVD|Actor 18|1
+|37|cd|Disco 19 CD|Artista 19|1
+|38|dvd|Película 19 DVD|Actor 19|1
+|39|cd|Disco 20 CD|Artista 20|1
+|40|cd|disco prueba|paula|1
+|41|cd|cd45|paula|1
+|42|cd|fgdfg|paula|1
+== Estructura de tabla para la tabla persona
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id_socio**//|int(11)|No|
+|nombre|varchar(50)|No|
+|apellido|varchar(50)|No|
+|contraseña|varchar(255)|No|
+|rol|enum(&#039;cliente&#039;, &#039;empleado&#039;, &#039;administrador&#039;)|No|cliente
+|estado|enum(&#039;activo&#039;, &#039;inactivo&#039;)|Sí|activo
+== Volcado de datos para la tabla persona
+
+|1|pau|martinez|kk|administrador|activo
+|24|oly|mihaila|kk|cliente|activo
+|25|gorka|fgvdfgvd|kk|cliente|activo
+|27|elena|alvarado|kk|empleado|activo
+|28|aitor|martinez|kk|empleado|inactivo
